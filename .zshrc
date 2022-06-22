@@ -71,10 +71,15 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
-    zsh-autosuggestions
-    fzf-zsh-plugin)
+      zsh-autosuggestions
+      fzf-zsh-plugin)
+
 
 source $ZSH/oh-my-zsh.sh
+
+
+alias rm='rm -i'
+# alias mv='mv -i'
 
 # User configuration
 
@@ -101,5 +106,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-eval "$(/usr/libexec/path_helper)"
-
+eval "$(starship init zsh)"

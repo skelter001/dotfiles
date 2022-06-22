@@ -1,5 +1,5 @@
 set number
-syntax off
+syntax on
 
 set backspace=indent,eol,start
 let g:vimtex_view_general_options = '-r @line @pdf @tex'
@@ -26,8 +26,11 @@ Plug 'aklt/plantuml-syntax'
 Plug 'tyru/open-browser.vim'
 Plug 'weirongxu/plantuml-previewer.vim'
 
+" markdown previewer
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
 call plug#end()
 " Viewer options: One may configure the viewer either by specifying a built-in
 " viewer method:
 let g:tex_flavor = 'latex'
-let g:vimtex_view_method = 'skim'
+let g:vimtex_view_method = 'zathura'
